@@ -1,0 +1,32 @@
+﻿title: redStart
+---
+
+Red: "Hi I am red."
+
+Red: "Choose from the below"
+
+-> player: Good choice
+-> player: Bad choice
+<<SpokeToRed>>
+===
+
+title: redEnd
+---
+Red: "time to speak to blue..."
+===
+
+title: blueStart
+---
+Blue: "Pick from red"
+===
+
+title: goodChoice
+---
+Blue: "Good on you for picking the good choice"
+<<GoodChoice>>
+===
+
+title: badChoice
+---
+Blue: "Why did you pick the bad choice?"
+===
