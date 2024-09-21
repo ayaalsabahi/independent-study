@@ -1,0 +1,34 @@
+﻿title: redChapter1
+---
+Red: "Hi"
+-> good choice 
+    <<updateChapter "blue" 2>>
+-> bad choice
+    <<updateChapter blue 3>>
+<<updateChapter "red" 2 >>
+
+
+===
+
+title: redChapter2
+---
+Red: "Talk to blue"
+===
+
+title: blueChapter1
+---
+"Hi"
+"Select from red first"
+
+===
+
+title: blueChapter2
+---
+"You selected the bad choice."
+===
+
+title: blueChapter3
+---
+"You selected the good choice."
+===
+
