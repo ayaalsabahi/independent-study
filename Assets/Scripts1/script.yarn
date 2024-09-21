@@ -4,7 +4,7 @@ Red: "Hi"
 -> good choice 
     <<updateChapter "blue" 2>>
 -> bad choice
-    <<updateChapter blue 3>>
+    <<updateChapter "blue" 3>>
 <<updateChapter "red" 2 >>
 
 
