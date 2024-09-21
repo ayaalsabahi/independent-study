@@ -41,6 +41,6 @@ public class Player : MonoBehaviour
     public void OnTriggerExit(Collider other) 
     {
         // Implement any logic for when the player exits the proximity of the NPC
-         dialogueRunner.StopDialogue();
+         dialogueRunner.Stop();
     }
 }
