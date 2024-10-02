@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
         {
             // Constructing the chapter string based on the current chapter
             newChapterStr = playerName + "Chapter" + currentChapter.ToString();
-            Debug.Log(" new chapter name is:" + newChapterStr);
             dialogueRunner.StartDialogue(newChapterStr);
         }
     }
