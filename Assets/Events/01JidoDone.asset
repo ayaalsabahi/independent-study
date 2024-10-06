@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e721e5294363749ed941d40370551939, type: 3}
-  m_Name: spokeToRed
+  m_Name: 01JidoDone
   m_EditorClassIdentifier: 
   listeners: []

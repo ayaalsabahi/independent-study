@@ -8,21 +8,24 @@ tags:
 
 title: jido1
 ---
-“My child! My child! Come here!”
+My child! My child! Come here!
 
-“You look new here… what brings you to Oman!” 
+You look new here… what brings you to Oman! 
 ->	My family just moved here from Yemen and looking to make new friends
 ->	I heard that Souq Mutrah is a place to buy souvineers
 “Come Some coffee and Halwa for you” 
 
-“Thank you so much (insert chomping noises, 2 secs delay later)” 
+Thank you so much 
+//(insert chomping noises, 2 secs delay later)
 
-“How would one begin to make Halwa” 
+How would one begin to make Halwa
 
-“Let me tell you my child, first you’d need 
+Let me tell you my child, first you’d need Sugar, Cadramon, Saffron, Dates
 
-“Now the ‘how’ on the other hand… Find my cat Leila and I will give you a recipe!’
 
+Now the ‘how’ on the other hand… Find my cat Leila and I will give you a recipe!
+//call  the display thingy 
 <<updateChapter "jido" -1>>
+//raise the event that jido was done
 
 ===

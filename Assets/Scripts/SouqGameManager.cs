@@ -11,10 +11,12 @@ public class SouqGameManager : MonoBehaviour
     public Camera playerCamera; 
     public bool playerCameraSetting;
 
-
     public GameObject mainPlayer; 
     private PlayerMovement mainPlayerScript; 
     // Awake is called when the script instance is being loaded
+
+    //create a dictionaryyyy!
+    
     private void Awake()
     {
         // Check if there is already an instance of this class
@@ -34,17 +36,14 @@ public class SouqGameManager : MonoBehaviour
         );
         //get the scipt componet of the PlayerMovement Once
         mainPlayerScript = mainPlayer.GetComponent<PlayerMovement>();
+        playerCameraSetting = true; 
         
 
     }
-
-    void Start()
-    {
-    }
-
     // Updated main camera controls + pauses player movement
     public void SwitchCameraSetting()
     {
+        Debug.Log("Called switch camera");
         playerCameraSetting = !playerCameraSetting;
         playerCamera.enabled = playerCameraSetting;
         mainPlayerScript.switchMovement();
@@ -56,7 +55,6 @@ public class SouqGameManager : MonoBehaviour
         GameObject npcPlayer = GameObject.Find(playerName);
         Player playerScript = npcPlayer.GetComponent<Player>();
         playerScript.ChangeChapter(chapter);
-
         // Additional updates can go here (e.g., updating a dictionary)
     }
 }

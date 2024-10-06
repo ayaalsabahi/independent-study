@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Yarn.Unity;
 
 public class Player : MonoBehaviour
@@ -12,11 +13,13 @@ public class Player : MonoBehaviour
     private string newChapterStr;
     private bool nextChapter;
     private Camera myCamera; 
+    private string cameraName; //we can have different setups for different players so have different cameras later on
 
     private void Start()
     {
         // Initialize playerName based on the GameObject name
         Initialize(gameObject.name);
+
     }
 
     public void Initialize(string name)
@@ -25,7 +28,18 @@ public class Player : MonoBehaviour
         this.currentChapter = 1;
         this.nextChapter = true;
         //get the mycamera instance 
-        this.myCamera = GetComponentInChildren<Camera>();
+        cameraName = name + "Camera"; 
+        Debug.Log("Camera name is: " + cameraName);
+        GameObject cameraObject = GameObject.Find(cameraName); //get the camera specifc to the each setup players name
+
+        if(cameraObject == null){
+            Debug.Log("CAMERA IS NULL!");
+        }
+
+        this.myCamera = cameraObject.GetComponent<Camera>();
+
+        this.myCamera.enabled = false; 
+
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -41,7 +55,7 @@ public class Player : MonoBehaviour
                 //turn off players camera
                 SouqGameManager.Instance.SwitchCameraSetting();
                 //turn on my camera
-                myCamera.enabled = true; 
+                myCamera.enabled = true; //have to change this here to be the same camera for all!!!!
             }
             
             nextChapter = false; 
@@ -64,8 +78,6 @@ public class Player : MonoBehaviour
     {
         // Implement any logic for when the player exits the proximity of the NPC
         dialogueRunner.Stop();
-
-        //my camera off
        
 
 
